@@ -1,3 +1,4 @@
+import sys
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -151,3 +152,6 @@ def boruvka(filename):
     node,x,y,edgee,startnode=inputfromfile(filename)
     edgee=minimize(edgee)
     boruvkaMST(int(node),edgee,x,y)
+
+if __name__ == "__main__":
+    boruvka(sys.argv[1]) 
